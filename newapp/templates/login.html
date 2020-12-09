@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+    .Input{
+    color:brown;
+    height:30px;
+    width:300px;
+  border-radius:30px;
+    }
+</style>
+</head>
+<body>
+<center>
+    <h2>Login</h2>
+<form method="post" action="">
+    {% csrf_token %}
+    {% if error != None %}
+    <h3 style="color:red">{{error}}</h3>
+   Enter User Name <input placeholder="user name" name="username" type="text" class="Input"><br><br>
+    Enter Password<input placeholder="password" name="passwsord" type="password" class="Input"><br><br>
+    <button type="submit" style="color:green;width:100px;height:30px">Login</button>
+    {% else %}
+    Enter User Name <input placeholder="user name" name="username" type="text" class="Input"><br><br>
+    Enter Password<input placeholder="password" name="passwsord" type="password" class="Input"><br><br>
+    <button type="submit" style="color:green;width:100px;height:30px">Login</button>
+    {% endif %}
+</form>
+    </center>
+</body>
+</html>

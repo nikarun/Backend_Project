@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>URL_PAGE</title>
+    <style>
+    .Input{
+    color:brown;
+    height:30px;
+    width:300px;
+  border-radius:30px;
+    }
+    </style>
+</head>
+<body>
+<center>
+    <h2>Enter Url</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+         <input name="url" placeholder="enter url" type="url" class="Input"><br><br>
+        <button type="submit" style="color:green;height:30px;width:100px" >Submit</button>
+    </form>
+</center>
+{{data.content}}
+</body>
+</html>
